@@ -11,7 +11,7 @@ visualized through an interactive Streamlit dashboard.
 Raw WHO datasets
       │
       ▼
-Vaccination_EDA_R1.ipynb   → cleans, validates, and exports 7 cleaned CSVs
+Vaccination_EDA.ipynb   → cleans, validates, and exports 7 cleaned CSVs
       │
       ▼
 SQL.ipynb                  → builds a normalized star-schema SQL database
@@ -34,7 +34,7 @@ streamlit_app/              → live interactive dashboard, deployed on
 
 ```
 .
-├── Vaccination_EDA_R1.ipynb        # Data cleaning & exploratory analysis
+├── Vaccination_EDA.ipynb        # Data cleaning & exploratory analysis
 ├── Vaccination_Report.docx         # Original project brief / requirements
 ├── cleaned_vaccine_data/           # 7 cleaned CSVs (EDA output)
 │   ├── vaccination_coverage.csv
@@ -48,7 +48,7 @@ streamlit_app/              → live interactive dashboard, deployed on
 │                                    # answers all project questions,
 │                                    # generates ER diagram, exports
 │                                    # Power BI–ready tables
-├── migration.ipynb                 # Migrates SQLite -> Neon PostgreSQL,
+├── Migration_n_Query.ipynb                 # Migrates SQLite -> Neon PostgreSQL,
 │                                    # live connection + interactive query tool
 ├── vaccination.db                  # SQLite database (SQL.ipynb output)
 └── streamlit_app/
@@ -59,9 +59,6 @@ streamlit_app/              → live interactive dashboard, deployed on
         └── secrets.toml.example    # Template only — real secrets go in
                                       # Streamlit Cloud's Secrets manager
 ```
-
-*(Adjust paths above if your actual repo layout differs — e.g. if notebooks
-live in a `notebooks/` folder.)*
 
 ## Data sources
 
@@ -97,6 +94,10 @@ WHO's own published regional/global rollups directly (not re-derived).
 
 An entity-relationship diagram (crow's-foot notation, PK/FK labeled) is
 generated inline in `SQL.ipynb` using Graphviz.
+
+## ER-Diagram of Schema
+
+![Alt text](images/vaccination_er.png)
 
 ## SQL analysis (`SQL.ipynb`)
 
