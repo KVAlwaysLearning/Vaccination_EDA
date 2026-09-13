@@ -97,7 +97,7 @@ generated inline in `SQL.ipynb` using Graphviz.
 
 ## ER-Diagram of Schema
 
-![Alt text](images/vaccination_er.png)
+![Vaccination_ER](vaccination_er.png)
 
 ## SQL analysis (`SQL.ipynb`)
 
