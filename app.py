@@ -64,8 +64,13 @@ selected_regions = st.sidebar.multiselect("WHO Region", all_regions, default=all
 antigens_df = run_query(
     "SELECT DISTINCT antigen_code, antigen_description FROM dim_antigen ORDER BY 1;"
 )
+antigen_list = antigens_df["antigen_code"].tolist()
+# Default to MCV1 (measles, first dose) since it reliably has WUENIC estimates —
+# not every antigen code does (HPV/PAB-specific codes often only report under
+# their own coverage_category and never get a WUENIC modeled estimate).
+default_antigen_idx = antigen_list.index("MCV1") if "MCV1" in antigen_list else 0
 antigen_choice = st.sidebar.selectbox(
-    "Antigen (coverage views)", antigens_df["antigen_code"],
+    "Antigen (coverage views)", antigen_list, index=default_antigen_idx,
     format_func=lambda code: f"{code} — {antigens_df.set_index('antigen_code').loc[code, 'antigen_description']}"
 )
 
@@ -152,8 +157,25 @@ with tab_map:
         )
         fig.update_layout(margin=dict(l=0, r=0, t=0, b=0))
         st.plotly_chart(fig, use_container_width=True)
+        st.caption(f"{len(map_df)} countries shown.")
     else:
-        st.info("No coverage data for this antigen/year/region combination.")
+        # Check whether this antigen has ANY WUENIC data at all, anywhere/anytime,
+        # so the message tells you the real cause instead of just "no data".
+        any_data = run_query(
+            "SELECT COUNT(*) AS n FROM pbi_coverage WHERE antigen_code = :antigen AND coverage_category = 'WUENIC';",
+            params={"antigen": antigen_choice},
+        )["n"].iloc[0]
+        if any_data == 0:
+            st.warning(
+                f"'{antigen_choice}' has no WUENIC (modeled coverage estimate) data at all in this dataset — "
+                f"it likely only reports under a different coverage_category (e.g. HPV, PAB, ADMIN). "
+                f"Try MCV1, DTPCV3, POL3, or BCG instead."
+            )
+        else:
+            st.info(
+                f"'{antigen_choice}' has WUENIC data for other years/regions, but none for "
+                f"{year_range[1]} with the current region filter. Try a different year or widen the region selection."
+            )
 
 # ------------------------------------------------------------------
 # TAB 3 — Trend lines / bar charts by region
