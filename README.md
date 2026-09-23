@@ -10,7 +10,7 @@ Streamlit), both querying the same live database.
 
 | | |
 |---|---|
-| 📊 **Live Streamlit Dashboard** | [vaccinationeda-app0.streamlit.app](https://vaccinationeda-app0.streamlit.app/) |
+| 📊 **Live Streamlit Dashboard** | [vaccinationeda-app1.streamlit.app](https://vaccinationeda-app1.streamlit.app/) |
 | 📁 **Raw Dataset (Google Drive)** | [WHO vaccination data — CSV/Excel source files](https://drive.google.com/drive/folders/1YQ6mNrZCrlEeBP4GH3VnLBNXb7OBD4tf) |
 | 🗄️ **Live Database** | PostgreSQL on [Neon](https://neon.tech) — connected directly by both dashboards and by `Migration_n_Query.ipynb` |
 | 📄 **Full Project Report** | `Vaccination_Project_Report.docx` (in this repo) — 45-page write-up covering every stage below, all 25 SQL questions in full, and every chart/dashboard screenshot |
