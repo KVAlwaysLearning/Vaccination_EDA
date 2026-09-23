@@ -66,7 +66,7 @@ Migration_n_Query.ipynb     → migrates the SQLite database to a live,
 ├── SQL.ipynb                         # SQLite star-schema DB + full SQL analysis + ER diagram
 ├── Migration_n_Query.ipynb           # Neon PostgreSQL migration + interactive query tool
 ├── vaccination_er.png                # Exported entity-relationship diagram
-├── <dashboard>.pbix                  # Power BI dashboard file
+├── vdb.pbix                  # Power BI dashboard file
 ├── screenshots/                      # Dashboard screenshots (see below)
 └── streamlit_app/
     ├── app.py                        # Streamlit dashboard source code
