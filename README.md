@@ -106,7 +106,7 @@ synced year/region slicers across pages.
 
 | Home | KPI Overview |
 |---|---|
-| ![KPI_Overview_tab](screenshots/KPI_Overview_tab.png) | ![KPI_Overview_tab](screenshots/KPI_Overview_tab.png) |
+| ![KPI_Overview_tab](screenshots/KPI_Overview_tab.PNG) | ![KPI_Overview_tab](screenshots/KPI_Overview_tab.PNG) |
 
 | Geographic Heatmap | Trends |
 |---|---|
