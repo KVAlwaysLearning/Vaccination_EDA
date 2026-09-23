@@ -106,15 +106,15 @@ synced year/region slicers across pages.
 
 | Home | KPI Overview |
 |---|---|
-| ![KPI_Overview_tab](screenshots/KPI_Overview_tab.PNG) | ![KPI_Overview_tab](screenshots/KPI_Overview_tab.PNG) |
+| ![Power BI Home](screenshots/KPI_Overview_tab.PNG) | ![Power BI KPI Overview](screenshots/KPI_Overview_tab.PNG) |
 
 | Geographic Heatmap | Trends |
 |---|---|
-| ![Power BI Geographic Heatmap](screenshots/Geomap_tab.png) | ![Power BI Trends](screenshots/Trends_tab.png) |
+| ![Power BI Geographic Heatmap](screenshots/Geomap_tab.PNG) | ![Power BI Trends](screenshots/Trends_tab.PNG) |
 
 | Coverage vs Incidence | Vaccine Introduction |
 |---|---|
-| ![Power BI Coverage vs Incidence](screenshots/Coverage_tab.png) | ![Power BI Vaccine Introduction](screenshots/Vax_intro_tab.png) |
+| ![Power BI Coverage vs Incidence](screenshots/Coverage_tab.PNG) | ![Power BI Vaccine Introduction](screenshots/Vax_intro_tab.PNG) |
 
 ## Streamlit Dashboard
 
@@ -127,15 +127,15 @@ when needed.
 
 | KPI Overview | Geographic Heatmap |
 |---|---|
-| ![Streamlit KPI Overview](screenshots/Streamlit_1.png) | ![Streamlit Geographic Heatmap](screenshots/Streamlit_2.png) |
+| ![Streamlit KPI Overview](screenshots/Streamlit_1.PNG) | ![Streamlit Geographic Heatmap](screenshots/Streamlit_2.PNG) |
 
 | Trends | Coverage vs Incidence |
 |---|---|
-| ![Streamlit Trends](screenshots/Streamlit_3.png) | ![Streamlit Coverage vs Incidence](screenshots/Streamlit_4.png) |
+| ![Streamlit Trends](screenshots/Streamlit_3.PNG) | ![Streamlit Coverage vs Incidence](screenshots/Streamlit_4.PNG) |
 
 | Vaccine Introduction |
 |---|
-| ![Streamlit Vaccine Introduction](screenshots/Streamlit_5.png) |
+| ![Streamlit Vaccine Introduction](screenshots/Streamlit_5.PNG) |
 
 ## Tech Stack
 
